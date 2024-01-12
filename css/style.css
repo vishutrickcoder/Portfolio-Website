@@ -1,0 +1,47 @@
+/* Variables */
+:root{
+    --main-color : #e02f6b;
+    --blue: #0000ff;
+    --blue-dark : #18293c;
+    --orange : #ffa500;
+    --green-yello : #cddc39;
+    --pink-light : #f8f4f4;
+    --cyan-light : #c9f2f6;
+    --white : #ffffff;
+    --white-alpha-40 : rgba(255,255,255,0.40);
+    --white-alpha-25 : rgba(255,255,255,0.25);
+    --backdrop-filter-blur : blur(5px);
+}
+
+* {
+    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   outline: none;
+}
+
+::before , ::after {
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right , var(--pink-light), var(--cyan-light));
+    font-size: 16px;
+    color: var(--blue-dark);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color : transparent;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green-yello);
+    z-index: -1;
+    opacity: 0.12;
+}
