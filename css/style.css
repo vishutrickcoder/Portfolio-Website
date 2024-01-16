@@ -35,7 +35,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
     background: linear-gradient(315deg, rgba(255, 189, 251,0.4) 3%, rgb(157, 206, 255) 38%, rgb(136, 255, 247) 68%, rgb(255, 255, 255) 98%);
-    animation: gradient 15s ease infinite;
+    animation: gradient 30s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
     font-size: 16px;
@@ -89,8 +89,8 @@ img {
 .centerProperty {
     align-items: center;
 }
-
-/* .hidden{
+/* 
+.hidden{
     display: none !important;
 } */
 
@@ -218,7 +218,7 @@ button {
     border-radius: 50%;
     border: 5px solid var(--white-alpha-25);
     margin: auto;
-    box-shadow: 10px 10px 51px rgba(224, 255, 255, 0.366);
+    box-shadow: 10px 10px 51px rgb(100, 100, 100);
 }
 
 .home-section {
@@ -328,7 +328,181 @@ h6 {
     font-family: 'Poppins';
     font-weight: 500;
     margin: 0 30px 0 0;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
+
+.about-tabs .tab-item:last-child{
+    margin: 0;
+}
+
+.about-tabs .tab-item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--blue-dark);
+    transition: width 0.3s ease;
+}
+
+.about-tabs .tab-item:hover::before{
+    width: 100%;
+}
+
+.about-tabs .tab-item.active::before{
+    width: 100%;
+    background-color: var(--main-color);
+
+}
+
+.about-tabs .tab-item.active{
+    color: var(--main-color);
+    opacity: 1;
+    cursor: auto;
+}
+
+.about-text .timeline{
+    position: relative;
+}
+
+.about-text .timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 5px;
+    background-color: var(--main-color);
+}
+
+.about-text .tab-content{
+    padding: 40px 0;
+    display: none;
+}
+
+.about-text .tab-content.active{
+    display: block;
+}
+
+.about-text .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+}
+.about-text .timeline-item::before{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    left: 0;
+    width: 10px;
+    height: 10px;
+    top: 16px;
+    border-radius: 50%;
+
+}
+.about-text .timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.about-text .timeline-item .date{
+    display: block;
+    color: var(--main-color);
+    font-weight: bolder;
+    font-family: 'Rubik Burned';
+    margin: 0 0 10px;
+}
+.about-text .timeline-item h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 0 0 10px;
+    font-family: 'Poppins';
+}
+.about-text .timeline-item h4 span{
+    font-weight: 400;
+}
+
+/* About Section Button  */
+
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all .15s ease;
+  }
+
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+  
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+  
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ff4655;
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .button_text {
+    position: relative;
+  }
+  
+  .button:hover {
+    color: #0f1923;
+  }
+  
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .button:hover .button_lg::after {
+    background-color: #fff;
+  }
 
 /* Background Part */
 
