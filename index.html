@@ -17,7 +17,27 @@
             <div class="wave"></div>
             <div class="wave"></div>
          </div>
-        <section class="home-section centerProperty">
+
+         <header class="header">
+            <div class="container">
+                <div class="row flex-end">
+                    <button type="button" class="nav-togg">
+                        <span></span>
+                    </button>
+                    <nav class="nav">
+                        <div class="nav-inner">
+                            <ul>
+                                <li><a href="#home" class="nav-item link-item">home</a></li>
+                                <li><a href="#about" class="nav-item link-item">about</a></li>
+                                <li><a href="#portfolio" class="nav-item link-item">portfolio</a></li>
+                                <li><a href="#contact" class="nav-item link-item">contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+         </header>
+        <section class="home-section centerProperty active" id="home">
             <div class="container">
                 <div class="row centerProperty">
                     <div class="home-text">
@@ -26,11 +46,11 @@
                         <h2>Full Stack Developer</h2>
 
                             <button class="btn2 " >
-                                <a href="#" >About</a>
+                                <a href="#about" class="link-item" >About</a>
                             </button>
                                
                             <button class="btn" >
-                              <a href="#" >Portfolio</a>
+                              <a href="#portfolio" class="link-item">Portfolio</a>
                             </button>
 
                     </div>
@@ -44,7 +64,7 @@
             </div>
         </section>
 
-        <section class="about-section section-padding  ">
+        <section class="about-section section-padding " id="about">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -122,14 +142,14 @@
                         <button class="button">
                             <span class="button_lg">
                                 <span class="button_sl"></span>
-                                <span class="button_text">Download Resume</span>
+                                <span class="button_text"><a href="cv/vishal_resume.pdf" target="_blank" class="link-item">Download Resume</a></span>
                             </span>
                         </button>
                            
                         <button class="button">
                             <span class="button_lg">
                                 <span class="button_sl"></span>
-                                <span class="button_text">Contact me</span>
+                                <span class="button_text"><a href="#contact" class="link-item">Contact me</a></span>
                             </span>
                         </button>
                           
@@ -138,7 +158,7 @@
             </div>
         </section>
 
-        <section class="profile-section section-padding">
+        <section class="profile-section section-padding " id="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -148,7 +168,7 @@
                 <div class="row">
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/portfolioWeb.png" alt="">
+                            <img src="/img/projectThumbnail/portfolioWeb.png" alt="">
                         </div>
                         <h3 class="portfolio-title">Initial Level Portfolio Website</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -170,7 +190,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/narutoWeb.png" alt="">
+                            <img src="/img/projectThumbnail/narutoWeb.png" alt="">
                         </div>
                         <h3 class="portfolio-title">Naruto theme website</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -192,7 +212,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/GuessTheNumber.png" alt="">
+                            <img src="/img/projectThumbnail/GuessTheNumber.png" alt="">
                         </div>
                         <h3 class="portfolio-title">Guess the number game</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -214,7 +234,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/imageSlider.png" alt="">
+                            <img src="/img/projectThumbnail/imageSlider.png" alt="">
                         </div>
                         <h3 class="portfolio-title">horizontal image slider</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -236,7 +256,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/noteWeb.png" alt="">
+                            <img src="/img/projectThumbnail/noteWeb.png" alt="">
                         </div>
                         <h3 class="portfolio-title">Note Taking Website</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -258,7 +278,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/nextGenWeb.png" alt="">
+                            <img src="/img/projectThumbnail/nextGenWeb.png" alt="">
                         </div>
                         <h3 class="portfolio-title">Responsive WebSite</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -280,7 +300,7 @@
                     </div>
                     <div class="portfolio-item">
                         <div class="porfolio-thumbnail">
-                            <img src="/img/dictionaryWebsiteThumnail.png" alt="">
+                            <img src="/img/projectThumbnail/dictionaryWebsiteThumnail.png" alt="">
                         </div>
                         <h3 class="portfolio-title">Word dictionary website</h3>
                         <button class="button web-visit-btn project-view" type="button" >
@@ -303,6 +323,73 @@
                 </div>
             </div>
         </section>
+
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Contact me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Name" class="input-control" required>
+                                </div>
+    
+                                <div class="input-group">
+                                    <input type="text" placeholder="Email" class="input-control" required>
+                                </div>
+    
+                                <div class="input-group">
+                                    <input type="text" placeholder="Subject" class="input-control" required>
+                                </div>
+    
+                                <div class="input-group">
+                                    <textarea class="input-control" placeholder="Message" required></textarea>
+                                </div>
+
+                                <div class="submit-btn">
+                                    <!-- <button type="submit" class="btn">Send Message</button> -->
+                                    <button class="button" type="submit">
+                                        <span class="button_lg">
+                                            <span class="button_sl"></span>
+                                            <span class="button_text">Send Message</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <h3>Email</h3>
+                            <p>vs1015242@gmail.com</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Contact No...</h3>
+                            <p>+91-9993664150</p>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h3>Follow Me</h3>
+                            <div class="social-link">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-x"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <div class="portfolio-detail-popup" >
@@ -313,7 +400,7 @@
                        <i class="fas fa-times"></i>
                       </button>
                     <div class="popup-thunbnail">
-                        <img src="img/dictionaryWebsiteThumnail.png" alt="">
+                        <img src="img/projectThumbnail/dictionaryWebsiteThumnail.png" alt="">
                     </div>
                     <h3>dictionary webapp</h3>
                 </div>

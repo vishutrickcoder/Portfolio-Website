@@ -1,7 +1,7 @@
 
-const tabs = document.querySelector(".about-tabs")
-const aboutSection = document.querySelector('.about-section')
-
+const tabs = document.querySelector(".about-tabs");
+const aboutSection = document.querySelector('.about-section');
+const navToggler = document.querySelector('.nav-togg');
 tabs.addEventListener("click", (e) => {
     if(e.target.classList.contains("tab-item") && !e.target.classList.contains('active')){
         tabs.querySelector('.active').classList.remove("active")
@@ -12,6 +12,46 @@ tabs.addEventListener("click", (e) => {
 
     }
 })
+
+navToggler.addEventListener('click' , (e) => {
+    hideSection();
+    toggleNavBar();
+    document.body.classList.toggle('hide-scrolling')
+})
+
+function toggleNavBar(){
+    document.querySelector('.header').classList.toggle('active')
+}
+
+function hideSection(){
+    document.querySelector('section.active').classList.toggle('fade-out');
+}
+
+
+/* Active Section*/
+
+document.addEventListener('click' , (e) => {
+    if(e.target.classList.contains('link-item') && e.target.hash !== ""){
+        navToggler.classList.add('hide')
+        if(e.target.classList.contains('nav-item')){
+            toggleNavBar()
+        }else{
+            hideSection()
+            document.body.classList.add('hide-scrolling');
+        }
+
+        setTimeout(() => {
+            document.querySelector('section.active').classList.remove('active' , "fade-out")
+            document.querySelector(e.target.hash).classList.add('active')
+            window.scrollTo(0,0)
+            document.body.classList.remove('hide-scrolling');
+            navToggler.classList.remove('hide')
+
+        },500)
+    }
+})
+
+//End
 
 document.addEventListener("click",(e) => {
     if(e.target.classList.contains("project-view")){
